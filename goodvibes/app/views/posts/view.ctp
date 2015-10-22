@@ -159,13 +159,14 @@
 		<div class="content_container wrapper">
 			<div class="content_actions" style="float: left; width: 55px; margin-right: 10px;">
 				<?php echo $html->image('arrow_up.png', array(
-                                        'alt' => 'Vote Up',
+                                        'alt' => 'Good Vibe',
                                         'url' => '/vote/' . $answer['Answer']['public_key'] . '/up'
                                     )); ?>
 				<span class="large_text quiet" style="display: block; padding: 0px; margin: 0px;"><strong><?=$answer['Answer']['votes'];?></strong></span>
 				<?php echo $html->image('arrow_down.png', array(
                                         'alt' => 'Vote Down',
-                                        'url' => '/vote/' . $answer['Answer']['public_key'] . '/down'
+                                        'url' => '/vote/' . $answer['Answer']['public_key'] . '/down',
+                                        'class' =>'downVote'
                                     )); ?>
                                 
 				<?php if($question['Post']['user_id'] == $session->read('Auth.User.id') && $answer['Answer']['status'] != 'correct' && $question['Post']['status'] != 'closed') {?>
