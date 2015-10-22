@@ -7,7 +7,7 @@
   Global Elements
 -------------------------------------------------------------- */
 a {
-	color: #FF4200;
+	color: #F47B23;
 }
 
 a:hover { 
@@ -16,7 +16,9 @@ a:hover {
 .hide{
     display:none;
 }
-
+.bold{
+    font-weight:bold;
+}
 /* -------------------------------------------------------------- 
   Header Elements 
 -------------------------------------------------------------- */
@@ -25,7 +27,7 @@ a:hover {
 #header .tabs {}
 #header .tabs li {}
 #header .tabs a { font-weight: bold; background: #555; color: #fff; text-decoration: none; }
-#header .tabs a:hover {background-color: #ff2800;}
+#header .tabs a:hover {background-color: #F47B23;}
 
 #admin_header { border-bottom: 1px solid #ddd; }
 #admin_header .tabs {}
@@ -46,12 +48,12 @@ a:hover {
   Main Question Display Pages
 -------------------------------------------------------------- */
 .list_answers_answered {
-	background-color:#99CC33;
+	background-color:#F47B23;
 	color:#FFFFFF;
 }
 
 .list_answers_unanswered {
-	background-color:#CC3333;
+	background-color:#292554;
 	color:#FFFFFF;
 }
 
