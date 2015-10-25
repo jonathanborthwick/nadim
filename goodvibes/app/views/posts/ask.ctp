@@ -59,13 +59,13 @@
 		if($("#PostTitle").val().length < 10) {
 			$("#title_status").html('<span class="red"><?php echo __('Titles must be at least 10 characters long.',true) ?></span>');
 		} else {
-			$("#title_status").html('<?php echo __('What is your question about?',true) ?>');
+			$("#title_status").html('<?php echo __('What is your good vibe about?',true) ?>');
 		}
 	});
 	
   });
   </script>
-<h2><?php echo __('Ask a question',true) ?></h2>
+<h2><?php echo __('Request a good vibe',true) ?></h2>
 <?php if ($session->read('errors')) {
 		foreach($session->read('errors.errors') as $error) {
 			echo '<div class="error">' . $error . '</div>';
@@ -76,7 +76,7 @@
 <?=$form->label(__('Title',true));?><br/>
 
 <?=$form->text('title', array('class' => 'wmd-panel big_input', 'value' => $session->read('errors.data.Post.title')));?><br/>
-<span id="title_status"class="quiet"><?php echo __('What is your question about?',true) ?></span>
+<span id="title_status"class="quiet"><?php echo __('What is your good vibe about?',true) ?></span>
 <div id="resultsContainer"></div>
 
 <div id="wmd-button-bar" class="wmd-panel"></div>
@@ -109,7 +109,7 @@
 <?php } ?>
 <br/><br/>
 <?=$form->checkbox('Post.notify', array('checked' => true));?>
-<span style="margin-left: 5px;"><?php echo __('Notify me when my question is answered.',true) ?></span>
+<span style="margin-left: 5px;"><?php echo __('Notify me when my good vibe is responded to.',true) ?></span>
 
-<?=$form->end( __('Ask a question',true));?>
+<?=$form->end( __('Request a good vibe',true));?>
 

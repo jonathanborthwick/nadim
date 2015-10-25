@@ -107,7 +107,7 @@
 		  <ul class="tabs" style="float: right;">
 			<li>
 				<?=$html->link(
-						'Ask a Question',
+						'Request a good vibe',
 						array('controller' => 'posts', 'action' => 'ask')
 					);
 				?>

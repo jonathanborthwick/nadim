@@ -46,7 +46,7 @@ class PostsController extends AppController {
 	}
 	
 	public function ask() {
-		$this->set('title_for_layout', __('Ask a question',true));
+		$this->set('title_for_layout', __('Requesta good vibe',true));
 		
 		if(!empty($this->data)) {
 
