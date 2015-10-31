@@ -1,4 +1,11 @@
 <?php
+//nsl software
+if($session->read('Auth.User.id')==false){
+    header('Location: http://goodvibexchange.com/login');
+}
+?>
+
+<?php
 	echo $html->css('wmd.css');
 	echo $html->script('wmd/showdown.js');
 	echo $html->script('wmd/wmd.js');
@@ -82,6 +89,7 @@
 	
   });
   </script>
+  
 <h2><?php echo __('Request a good vibe',true) ?></h2>
 <?php if ($session->read('errors')) {
 		foreach($session->read('errors.errors') as $error) {
