@@ -1,4 +1,10 @@
 <?php
+//nsl software
+if($session->read('Auth.User.id')==false){
+    header('Location: http://goodvibexchange.com/login');
+}
+?>
+<?php
 echo $javascript->link('jquery/jquery.js');
 echo $javascript->link('jquery/jquery.bgiframe.min.js');
 echo $javascript->link('jquery/jquery.ajaxQueue.js');

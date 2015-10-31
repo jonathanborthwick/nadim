@@ -1,3 +1,9 @@
+<?php
+//nsl software
+if($session->read('Auth.User.id')==false){
+    header('Location: http://goodvibexchange.com/login');
+}
+?>
 <div id="body" class="wrapper">
     <table>
         <tr>
