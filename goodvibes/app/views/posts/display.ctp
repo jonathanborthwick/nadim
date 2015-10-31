@@ -1,4 +1,8 @@
 <?php
+//nsl software
+if($session->read('Auth.User.id')==false){
+    header('Location: http://goodvibexchange.com/login');
+}
 foreach($questions as $question) { ?>
 <div class="list_question wrapper">
 	<?php //var_dump($question); die(count($question['Answer'])); ?>
