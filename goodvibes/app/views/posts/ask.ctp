@@ -17,6 +17,23 @@
 
   <script>
   $(document).ready(function(){
+  //nsl software added this
+  //<?=$form->text('tags', array('id' => 'tag_input', 'class' => 'wmd-panel big_input'));?><br/>
+  
+  $('#PostTags').find("option[value='']").remove();
+  $.each(tags, function (count, tag) {
+              			//console.log(count);
+              			console.log(tag.name);
+              			//console.log(tag.count);
+              			if(tag.name == "general")
+              			{
+              				$('#PostTags').append($("<option selected='selected'></option>").attr("value", tag.name).text(tag.name));
+                        }
+                        else
+                        {
+                          $('#PostTags').append($("<option></option>").attr("value", tag.name).text(tag.name));
+                        }
+                      });
 	$("#resultsContainer").show("blind");
 	
 	$("#tag_input").autocomplete(tags, {
@@ -47,9 +64,9 @@
 
 	function getResults()
 	{
-	
+
 		$.get("/mini_search",{query: $("#PostTitle").val(), type: "results"}, function(data){
-		
+
 			$("#resultsContainer").html(data);
 			$("#resultsContainer").show("blind");
 		});
@@ -88,7 +105,7 @@
 <div id="wmd-preview" class="wmd-panel"></div>
 
 <?=$form->label(__('Tags',true));?><br/>
-<?=$form->text('tags', array('id' => 'tag_input', 'class' => 'wmd-panel big_input'));?><br/>
+<?=$form->select('tags');?><br/>
 <span id="tag_status" class="quiet"><?php echo __('Combine multiple words into single-words.',true) ?></span>
 
 <?php if(!$session->check('Auth.User.id')) { ?>

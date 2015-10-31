@@ -855,7 +855,7 @@ class EmailComponent extends Object{
 
 		$defaults = array(
 			'host' => 'localhost',
-			'port' => 587,
+			'port' => 25,
 			'protocol' => 'smtp',
 			'timeout' => 30
 		);

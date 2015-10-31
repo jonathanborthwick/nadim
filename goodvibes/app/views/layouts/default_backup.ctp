@@ -187,46 +187,25 @@
                     <?=$widget['Widget']['content'];?>
                         <?php
                         if(isset($tag)){
-                           foreach($tag as $key => $value) {
-                               echo("<a href='/tags/" . $tag['tag'] . "'>". $tag['tag'] . "</a>"  );
-                               echo("<br/>");
-                           }
+                            foreach($tag as $key => $value) {
+                                echo($tag[$key]['tag']);
+                                echo("<br/>");
+                            }
                         }else{
                             if(isset($questions)){
-                                $filteredArray = array();
-                                 foreach($questions as $question) {
-                                    foreach($question['Tag'] as $tag) {
-                                      array_push($filteredArray , $tag['tag']);
-                                    }
-                                }
-
                                 $len = count($questions);
                                 $no = 0;
-
-                                $results = array_unique($filteredArray);
-                                
-                                foreach($results as $tag) {
-                                     $no++;
-                                        if($no<=11){//limit to 10 tags
-                                            echo("<a href='/tags/" . $tag . "'>". $tag . "</a>"  );
+                                foreach($questions as $question) {
+                                    foreach($question['Tag'] as $tag) {
+                                        $no++;
+                                        if($no<=10){//limit to 10 tags
+                                            echo($tag['tag']);
                                             echo("<br/>");
                                         }
+                                    }
                                 }
-
-                                // nsl software jono added this ithen i removed this, the reason is because there was repeating link, the above array manipulations
-                                //removed the duplicates, i left this in her as reference in case we need to revert or use somewhere else
-                                // foreach($results as $question) {
-                                //     foreach($question['Tag'] as $tag) {
-
-                                //         $no++;
-                                //         if($no<=20){//limit to 10 tags
-                                //             echo("<a href='/tags/" . $tag['tag'] . "'>". $tag['tag'] . "</a>"  );
-                                //             echo("<br/>");
-                                //         }
-                                //     }
-                                // }
                             }else{
-
+                                echo("need to load tags");
                             }
                         }
                         ?>

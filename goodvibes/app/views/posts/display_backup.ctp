@@ -7,12 +7,10 @@ foreach($questions as $question) { ?>
 		<span class="large_text"><?=count($question['Answer']);?></span>
 		<span><?php __n('answer','goodvibes',count($question['Answer']))?></span>
 	</div>
-	&nbsp;&nbsp;&nbsp;
-	<!--<div class="list_views quiet">
-
+	<div class="list_views quiet">
 		<span class="large_text"><?=$question['Post']['views'];?></span>
 		<span><?php __n('view','views',$question['Post']['views']);?></span>
-	</div>-->
+	</div>
 	</div>
 	
 	
@@ -24,9 +22,8 @@ foreach($questions as $question) { ?>
 			);
 		?>
 		</div>
-
 		<div class="wrapper">
-			<div style="float: right;margin-right:-30px;">
+			<div style="float: right;">
 				<div class="thumb_with_border">
 		
 				<?php echo $html->link( $thumbnail->get(array(
@@ -42,13 +39,11 @@ foreach($questions as $question) { ?>
 				</div>
 				<div style="float: left; line-height: .9;">
 					<div>
-
 			<?=$html->link(
 					$question['User']['username'],
 					'/users/' . $question['User']['public_key'] . '/' . $question['User']['username']
 				);
-			?>
-
+			?> 
 			<span style="font-size: 8pt;">&#8226;</span>
 			<h4 style="display: inline;"><?=$question['User']['reputation'];?></h4>
 					</div> 
