@@ -3,6 +3,7 @@
 
 <html lang="en">
     <head>
+        
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title><?=$title_for_layout;?> | Coordino</title>
     <?=$html->css('screen.css');?>
@@ -20,6 +21,7 @@
         <![endif]-->
 
         <!--[if lte IE 6]><link rel="stylesheet" href="stylesheets/lib/ie.css" type="text/css" media="screen" charset="utf-8"><![endif]-->
+        
     </head>
     <body onload="prettyPrint()">
 

@@ -91,10 +91,7 @@
                 <td>joined</td>
                 <td><?=$time->timeAgoInWords($user['User']['joined']);?></td>
             </tr>
-            <tr>
-                <td>reputation</td>
-                <td><?=$user['User']['reputation'];?></td>
-            </tr>
+            
         </table>
 
     </div>

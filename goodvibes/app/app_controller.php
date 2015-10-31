@@ -38,7 +38,8 @@ class AppController extends Controller {
 	public function getWidgets($page='') {
 		if(empty($page)) { $page = Router::url(null, false); }
 		//if(strpos($_SERVER['REQUEST_URI'], 'questions/') == 1) { $page = '/questions/view'; }
-		$this->set('widgets', $this->Widget->findPage($page));
+		
+                $this->set('widgets', $this->Widget->findPage($page));
 	}
 	
 	/**
