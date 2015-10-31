@@ -1,4 +1,10 @@
 <?php
+//nsl software
+if($session->read('Auth.User.id')==false){
+    header('Location: http://goodvibexchange.com/login');
+}
+?>
+<?php
 	echo $html->css('wmd.css');
 	echo $javascript->link('wmd/showdown.js');
 	echo $javascript->link('wmd/wmd.js');
